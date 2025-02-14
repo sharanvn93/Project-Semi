@@ -22,7 +22,7 @@ def main():
             # Upper part content to be added
             st.markdown("---")  # Horizontal line for division
             st.markdown("<h3 style='text-align: center; padding-bottom: 10px;'>Parts Install</h3>", unsafe_allow_html=True)
-            col_lower = st.columns([0.3, 1, 0.3])
+            col_lower = st.columns([0.5, 2, 0.5])
             with col_lower[0]:
                 st.button("Mini PM")
             with col_lower[1]:
@@ -42,4 +42,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
