@@ -15,7 +15,7 @@ def main():
     
     elif tab_selection == "Parts History":
         # Create two columns for layout
-        col1, spacer, col2 = st.columns([1, 0.005, 1])
+        col1, spacer, col2 = st.columns([1.5, 0.005, 1])
         
         with col1:
             st.markdown("<h3 style='text-align: center;'>Critical Parts RFH</h3>", unsafe_allow_html=True)
