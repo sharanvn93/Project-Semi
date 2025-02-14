@@ -7,14 +7,14 @@ def main():
     # App title on the top left
     st.markdown("# Semi-RCA", unsafe_allow_html=True)
     
-    # Create Tabs at the bottom of the screen
-    tab1, tab2, tab3 = st.tabs(["Root Cause Analysis", "Parts History", "Process Run Signals"])
+    # Using a bottom-positioned tab bar
+    tab_selection = st.radio("", ["Root Cause Analysis", "Parts History", "Process Run Signals"], horizontal=True)
     
-    with tab1:
+    if tab_selection == "Root Cause Analysis":
         st.header("Root Cause Analysis")
         # Content to be added later
     
-    with tab2:
+    elif tab_selection == "Parts History":
         st.header("Parts History")
         
         # Create two columns for layout
@@ -22,17 +22,17 @@ def main():
         
         with col1:
             st.markdown("---")  # Horizontal line for division
-            st.subheader("Critical Parts RFH", divider="red")
+            st.markdown("<h3 style='text-align: center;'>Critical Parts RFH</h3>", unsafe_allow_html=True)
             # Upper part content to be added
             st.markdown("---")  # Horizontal line for division
-            st.subheader("Parts Install", divider="blue")
+            st.markdown("<h3 style='text-align: center;'>Parts Install</h3>", unsafe_allow_html=True)
             # Lower part content to be added
         
         with col2:
-            st.subheader("Current Config")
+            st.markdown("<h3 style='text-align: center;'>Current Config</h3>", unsafe_allow_html=True)
             # Right column content to be added
     
-    with tab3:
+    elif tab_selection == "Process Run Signals":
         st.header("Process Run Signals")
         # Content to be added later
 
