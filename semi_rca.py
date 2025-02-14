@@ -14,8 +14,8 @@ def main():
         pass  # Content to be added later# Content to be added later
     
     elif tab_selection == "Parts History":
-        st.markdown("<hr style='border:1px solid black'>", unsafe_allow_html=True)# Create two columns for layout
-        col1, col2 = st.columns([1, 1])
+        # Create two columns for layout
+        col1, col2 = st.columns([1, 0.05, 1])
         
         with col1:
             st.markdown("---")  # Horizontal line for division
