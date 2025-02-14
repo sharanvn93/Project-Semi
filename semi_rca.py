@@ -1,9 +1,13 @@
 import streamlit as st
 
 def main():
-    st.title("Semi-RCA")
+    # Set full screen layout
+    st.set_page_config(layout="wide")
     
-    # Create Tabs
+    # App title on the top left
+    st.markdown("# Semi-RCA", unsafe_allow_html=True)
+    
+    # Create Tabs at the bottom of the screen
     tab1, tab2, tab3 = st.tabs(["Root Cause Analysis", "Parts History", "Process Run Signals"])
     
     with tab1:
@@ -12,16 +16,21 @@ def main():
     
     with tab2:
         st.header("Parts History")
+        
+        # Create two columns for layout
         col1, col2 = st.columns([1, 1])
         
         with col1:
-            st.subheader("Critical Parts RFH Tracking")
+            st.markdown("---")  # Horizontal line for division
+            st.subheader("Critical Parts RFH", divider="red")
             # Upper part content to be added
-            st.subheader("Parts Replacement/Upgrade")
+            st.markdown("---")  # Horizontal line for division
+            st.subheader("Parts Install", divider="blue")
             # Lower part content to be added
         
         with col2:
-            st.write("") # Placeholder for additional content
+            st.subheader("Current Config")
+            # Right column content to be added
     
     with tab3:
         st.header("Process Run Signals")
