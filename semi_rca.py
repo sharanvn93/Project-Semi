@@ -18,10 +18,10 @@ def main():
         col1, spacer, col2 = st.columns([1, 0.005, 1])
         
         with col1:
-            st.markdown("<h3 style='text-align: center; padding-bottom: 10px;'>Critical Parts RFH</h3>", unsafe_allow_html=True), unsafe_allow_html=True)
+            st.markdown("<h3 style='text-align: center; padding-bottom: 10px;'>Critical Parts RFH</h3>", unsafe_allow_html=True)
             # Upper part content to be added
             st.markdown("---")  # Horizontal line for division
-            st.markdown("<h3 style='text-align: center; padding-bottom: 10px;'>Parts Install</h3>", unsafe_allow_html=True), unsafe_allow_html=True)
+            st.markdown("<h3 style='text-align: center; padding-bottom: 10px;'>Parts Install</h3>", unsafe_allow_html=True)
             col_lower = st.columns([1, 1, 1])
             with col_lower[0]:
                 st.button("Mini PM")
