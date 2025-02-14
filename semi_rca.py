@@ -20,7 +20,7 @@ def main():
         with col1:
             st.markdown("<h3 style='text-align: center;'>Critical Parts RFH</h3>", unsafe_allow_html=True)
             # Upper part content to be added
-            st.markdown("-")  # Horizontal line for division
+            st.markdown("---")  # Horizontal line for division
             st.markdown("<h3 style='text-align: center;'>Parts Install</h3>", unsafe_allow_html=True)
             # Lower part content to be added
         
