@@ -15,7 +15,7 @@ def main():
     
     elif tab_selection == "Parts History":
         # Create two columns for layout
-        col1, spacer, col2 = st.columns([1, 0.02, 1])
+        col1, spacer, col2 = st.columns([1, 0.005, 1])
         
         with col1:
             st.markdown("---")  # Horizontal line for division
@@ -26,6 +26,7 @@ def main():
             # Lower part content to be added
         
         with spacer:
+            st.markdown("<div style='border-left: 2px solid black; height: 100vh;'></div>", unsafe_allow_html=True)
             st.markdown("<div style='border-left: 2px solid black; height: 100%;'></div>", unsafe_allow_html=True)
         
         with col2:
