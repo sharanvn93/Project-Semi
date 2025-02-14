@@ -11,8 +11,7 @@ def main():
     tab_selection = st.radio("", ["Root Cause Analysis", "Parts History", "Process Run Signals"], horizontal=True)
     
     if tab_selection == "Root Cause Analysis":
-        
-        # Content to be added later
+        pass  # Content to be added later# Content to be added later
     
     elif tab_selection == "Parts History":
         
@@ -33,8 +32,7 @@ def main():
             # Right column content to be added
     
     elif tab_selection == "Process Run Signals":
-        
-        # Content to be added later
+        pass  # Content to be added later# Content to be added later
 
 if __name__ == "__main__":
     main()
