@@ -15,7 +15,7 @@ def main():
     
     elif tab_selection == "Parts History":
         # Create two columns for layout
-        col1, col2 = st.columns([1, 0.05, 1])
+        col1, spacer, col2 = st.columns([1, 0.02, 1])
         
         with col1:
             st.markdown("---")  # Horizontal line for division
@@ -24,6 +24,9 @@ def main():
             st.markdown("---")  # Horizontal line for division
             st.markdown("<h3 style='text-align: center;'>Parts Install</h3>", unsafe_allow_html=True)
             # Lower part content to be added
+        
+        with spacer:
+            st.markdown("<div style='border-left: 2px solid black; height: 100%;'></div>", unsafe_allow_html=True)
         
         with col2:
             st.markdown("<h3 style='text-align: center;'>Current Config</h3>", unsafe_allow_html=True)
@@ -34,4 +37,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
