@@ -18,6 +18,14 @@ def main():
         col1, spacer, col2 = st.columns([1, 0.005, 1])
         
         with col1:
+            upper, lower = st.columns([2, 1])
+            with upper:
+                st.markdown("<h3 style='text-align: center;'>Critical Parts RFH</h3>", unsafe_allow_html=True)
+                # Upper part content to be added
+            st.markdown("---")  # Horizontal line for division
+            with lower:
+                st.markdown("<h3 style='text-align: center;'>Parts Install</h3>", unsafe_allow_html=True)
+                # Lower part content to be added
             st.markdown("<h3 style='text-align: center;'>Critical Parts RFH</h3>", unsafe_allow_html=True)
             # Upper part content to be added
             st.markdown("---")  # Horizontal line for division
