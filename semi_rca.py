@@ -33,6 +33,7 @@ def main():
                 if st.button("New Chamber"):
                     uploaded_file = st.file_uploader("Upload Reference BOM File", type=["xlsx", "csv"])
                     if 'uploaded_file' in locals() and uploaded_file is not None:
+                if 'bom_df' in locals():
                         import pandas as pd
                         import datetime
                         
@@ -59,7 +60,7 @@ def main():
             st.markdown("<h3 style='text-align: center;'>Current Config</h3>", unsafe_allow_html=True)
             if 'uploaded_file' in locals() and uploaded_file is not None:
                 if 'bom_df' in locals():
-                st.dataframe(bom_df)
+                                    st.dataframe(bom_df)
             # Right column content to be added
     
     elif tab_selection == "Process Run Signals":
