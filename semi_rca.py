@@ -32,7 +32,7 @@ def main():
             with col_lower[3]:
                 if st.button("New Chamber"):
                     uploaded_file = st.file_uploader("Upload Reference BOM File", type=["xlsx", "csv"])
-                    if uploaded_file is not None:
+                    if 'uploaded_file' in locals() and uploaded_file is not None:
                         import pandas as pd
                         import datetime
                         
@@ -66,3 +66,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
