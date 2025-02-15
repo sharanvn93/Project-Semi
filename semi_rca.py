@@ -57,6 +57,8 @@ def main():
         
         with col2:
             st.markdown("<h3 style='text-align: center;'>Current Config</h3>", unsafe_allow_html=True)
+            if uploaded_file is not None:
+                st.dataframe(bom_df)
             # Right column content to be added
     
     elif tab_selection == "Process Run Signals":
