@@ -30,7 +30,27 @@ def main():
             with col_lower[2]:
                 st.button("Upgrade")
             with col_lower[3]:
-                st.button("New Chamber")
+                if st.button("New Chamber"):
+                    uploaded_file = st.file_uploader("Upload Reference BOM File", type=["xlsx", "csv"])
+                    if uploaded_file is not None:
+                        import pandas as pd
+                        import datetime
+                        
+                        # Read the uploaded file
+                        if uploaded_file.name.endswith(".xlsx"):
+                            bom_df = pd.read_excel(uploaded_file)
+                        else:
+                            bom_df = pd.read_csv(uploaded_file)
+                        
+                        # Add Date and RFH columns
+                        bom_df["Date"] = datetime.datetime.now().strftime("%Y-%m-%d")
+                        bom_df["RFH"] = 0
+                        
+                        # Save the modified file
+                        bom_df.to_excel("updated_BOM.xlsx", index=False)
+                        
+                        st.success("BOM file updated with Date and RFH columns.")
+                        st.download_button("Download Updated BOM", data=open("updated_BOM.xlsx", "rb"), file_name="updated_BOM.xlsx", mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
         
         with spacer:
             st.markdown("<div style='border-left: 2px solid black; height: 100vh;'></div>", unsafe_allow_html=True)
