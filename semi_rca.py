@@ -57,7 +57,8 @@ def main():
         
         with col2:
             st.markdown("<h3 style='text-align: center;'>Current Config</h3>", unsafe_allow_html=True)
-            if uploaded_file is not None:
+            if 'uploaded_file' in locals() and uploaded_file is not None:
+                if 'bom_df' in locals():
                 st.dataframe(bom_df)
             # Right column content to be added
     
@@ -66,4 +67,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
