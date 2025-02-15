@@ -33,7 +33,8 @@ def main():
                 if st.button("New Chamber"):
                     uploaded_file = st.file_uploader("Upload Reference BOM File", type=["xlsx", "csv"])
                     if 'uploaded_file' in locals() and uploaded_file is not None:
-                if 'bom_df' in locals():
+                    
+                                    if 'bom_df' in locals():
                         import pandas as pd
                         import datetime
                         
